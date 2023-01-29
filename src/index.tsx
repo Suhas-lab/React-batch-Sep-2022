@@ -12,7 +12,7 @@ import store from '../src/redux/store'
 console.log('Virtual Dom structure => ', App())
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 
-const storeConfig = store()
+const storeConfig = store();
 
 console.log('Things are in store', storeConfig.getState())
 
@@ -21,6 +21,7 @@ root.render(
     <App />
   </Provider>
 )
+// <Provide is api container which configure your store in your application at root level.
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

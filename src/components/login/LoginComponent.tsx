@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form'
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux/es/exports';
 import { useNavigate } from "react-router-dom";
-import { loginReducer } from '../../redux/store';
+import { loginReducer } from '../../redux/reducer/loginReducer';
 import BasicButtonCommon from '../commoncomponent/BasicButtonCommon';
 // Define function component we can follow the function structure. That structure should be normal function or arrow function. Right now i am using arrow function to define component.
 
@@ -18,7 +18,7 @@ const LoginComponent = () => {
 
   // useState : it is use define component state.
   const dispatchLogin = useDispatch();
-  const getLoginState = useSelector(state => false);
+  const getLoginState = useSelector(state => state);
 
   console.log("getLoginState in useselector", getLoginState);
 
@@ -92,7 +92,7 @@ const LoginComponent = () => {
   const handlerUserlogin = () =>{
     console.log("Make state update login");
     debugger
-    dispatch({type: 'LOGIN', isLogedIn: true});
+    // dispatch({type: 'LOGIN', isLogedIn: true});
   }
 
   return (
