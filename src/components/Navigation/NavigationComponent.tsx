@@ -22,7 +22,7 @@ const NavigationComponent = () => {
       <Navbar bg='primary' variant='dark'>
         <Container>
           <Link to="/">Dashboard</Link>
-          <Link to="/home">Home</Link>
+          <Link to="/homepage">Home</Link>
           <Link to="/login">Login</Link>
           <Link to="/childone">Chid One</Link>
           <Link to="/userlist">User List</Link>
@@ -31,7 +31,7 @@ const NavigationComponent = () => {
       </Navbar>
         <Routes>
             <Route path='/' element={<WelComePage />} />
-            <Route path='/home' element={<HomeComponent />} />
+            <Route path='/homepage' element={<HomeComponent />} />
             <Route path='/login' element={<LoginComponent />} />
             <Route path='/childone' element={<ChildOne />} />
             <Route path='/pricing' element={<BasicRating />} />
